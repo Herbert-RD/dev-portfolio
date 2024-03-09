@@ -16,10 +16,10 @@ const ProjectsFilter = ({ setSelectProject }) => {
                 sm:px-6
                 py-2
                 border
+								sm:w-2
                 dark:border-secondary-dark
                 rounded-lg
                 text-sm
-                sm:text-md
                 dark:font-medium
                 bg-secondary-light
                 dark:bg-ternary-dark
