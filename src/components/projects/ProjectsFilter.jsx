@@ -14,25 +14,26 @@ const ProjectsFilter = ({ setSelectProject }) => {
 			className="font-general-medium 
                 px-4
                 sm:px-6
+								shrink
                 py-2
                 border
-								sm:w-2
+								sm:w-64
                 dark:border-secondary-dark
                 rounded-lg
                 text-sm
                 dark:font-medium
-                bg-secondary-light
                 dark:bg-ternary-dark
                 text-primary-dark
                 dark:text-ternary-light
+								
             "
 		>
-			<option value={setSelectProject} className="text-sm sm:text-md">
+			<option value={setSelectProject} className="text-sm sm:text-md shrink">
 				All Projects
 			</option>
 
 			{selectOptions.map((option) => (
-				<option className="text-normal sm:text-md" key={option}>
+				<option className="text-normal sm:text-md shrink" key={option}>
 					{option}
 				</option>
 			))}

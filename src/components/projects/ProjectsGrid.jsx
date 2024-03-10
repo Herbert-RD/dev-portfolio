@@ -38,6 +38,7 @@ const ProjectsGrid = () => {
 				<div
 					className="
                         flex
+												shrink
                         justify-between
                         border-b border-primary-light
                         dark:border-secondary-dark
@@ -65,11 +66,14 @@ const ProjectsGrid = () => {
 								setSearchProject(e.target.value);
 							}}
 							className="font-general-medium 
+																block
+																shrink
                                 pl-3
                                 pr-1
                                 sm:px-4
                                 py-2
                                 border 
+																sm:w-64
                             border-gray-200
                                 dark:border-secondary-dark
                                 rounded-lg
