@@ -6,13 +6,16 @@ const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 
 	const [modalVisible, toggleModal] = useState(false);
-	function openImg(img){
-		return () => {
-			console.log(modalVisible)
-		}
+	
+	function modalElement(imgSource){
+			return (<ModalComponent>
+
+				<img src={imgSource} alt="" />
+
+				<button onClick={() => toggleModal(!modalVisible)}>Close modal</button>
+			</ModalComponent>)
 	}
 
-const modalElement = (<ModalComponent><button onClick={() => toggleModal(!modalVisible)}>Close modal</button></ModalComponent>)
 	return (
 
 		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
@@ -20,8 +23,9 @@ const modalElement = (<ModalComponent><button onClick={() => toggleModal(!modalV
 				{singleProjectData.ProjectImages.map((project) => {
 					return (
 						<>
-						<Component onClick={() => {toggleModal(!modalVisible); console.log(modalVisible)}}>
+						<Component onClick={() => {toggleModal(!modalVisible); }}>
 							<div className="mb-10 sm:mb-0" key={project.id}>
+
 								<img
 									src={project.img}
 									className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
@@ -31,7 +35,7 @@ const modalElement = (<ModalComponent><button onClick={() => toggleModal(!modalV
 							</div>
 						</Component>
 
-						{modalVisible ? modalElement : ""}
+						{modalVisible ? modalElement(project.img) : ""}
 
 						</>
 					);
