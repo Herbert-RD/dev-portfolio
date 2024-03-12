@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import ProjectSingle from './ProjectSingle';
+import ProjectSingle from './ProjectSingle.jsx';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
 

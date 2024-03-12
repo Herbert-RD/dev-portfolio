@@ -1,4 +1,4 @@
-import ProjectGallery from '../components/projects/ProjectGallery';
+import ProjectGallery from '../components/projects/ProjectGallery.jsx';
 import ProjectHeader from '../components/projects/ProjectHeader';
 import ProjectInfo from '../components/projects/ProjectInfo';
 import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects';
