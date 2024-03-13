@@ -6,42 +6,47 @@ const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 
 	const [modalVisible, toggleModal] = useState(false);
-	
-	function modalElement(imgSource){
-			return (<ModalComponent>
+	let modalComponent
 
-				<img src={imgSource} alt="" />
-
+	function buildModal(img){
+		return (
+			<ModalComponent id="galleryModal" onClick={() => toggleModal(!modalVisible)}>
+				<img src={img} alt="" />
 				<button onClick={() => toggleModal(!modalVisible)}>Close modal</button>
 			</ModalComponent>)
 	}
-
+	
 	return (
 
-		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+		<>
+			<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+				
+					{singleProjectData.ProjectImages.map((project) => {
+						return (
+							<>
+							<Component onClick={() => {toggleModal(buildModal(project.img))}}>
+								<div className="mb-10 sm:mb-0" key={project.id}>
+									<img
+										src={project.img}
+										className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+										alt={project.title}
+										key={project.id}
+										/>
+								</div>
+							</Component>
+
+							</>
+						);
+					})}
+			</div>
+
+			<div id='modal-wrapper'>
+				{modalVisible ? modalVisible : ""}
+			</div>
 			
-				{singleProjectData.ProjectImages.map((project) => {
-					return (
-						<>
-						<Component onClick={() => {toggleModal(!modalVisible); }}>
-							<div className="mb-10 sm:mb-0" key={project.id}>
+		</>
 
-								<img
-									src={project.img}
-									className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-									alt={project.title}
-									key={project.id}
-								/>
-							</div>
-						</Component>
 
-						{modalVisible ? modalElement(project.img) : ""}
-
-						</>
-					);
-				})}
-			
-		</div>
 	);
 };
 

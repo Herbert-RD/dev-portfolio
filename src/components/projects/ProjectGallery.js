@@ -9,8 +9,21 @@ export const ModalComponent = styled.div`
 
   background-color: rgba(0, 0, 0, 0.5);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
   > img {
-    width: 100%;
+    width: 40vw;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 47px rgba(0, 0, 0, 0.25));
+  }
+
+  > button {
+    background: white;
+
   }
 `
 
