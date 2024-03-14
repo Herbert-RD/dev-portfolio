@@ -1,7 +1,7 @@
 // Import images
-import Image1 from '../../images/ui-project-1.jpg';
-import Image2 from '../../images/web-project-2.jpg';
-import Image3 from '../../images/mobile-project-2.jpg';
+import Image1 from '../../images/youtuber-portfolio/image-1.png';
+import Image2 from '../../images/youtuber-portfolio/image-2.png';
+import Image3 from '../../images/youtuber-portfolio/image-3.png';
 import Image4 from '../../images/mobile-project-1.jpg';
 import Image5 from '../../images/web-project-1.jpg';
 import Image6 from '../../images/ui-project-2.jpg';
@@ -17,7 +17,7 @@ import {
 export const youtuberWebsiteData = {
 	ProjectHeader: {
 		title: 'Youtuber Personal Website',
-		publishDate: 'Jul 26, 2021',
+		publishDate: 'Jul 26, 2023',
 		tags: 'UI / Frontend',
 	},
 	ProjectImages: [
@@ -43,23 +43,18 @@ export const youtuberWebsiteData = {
 			{
 				id: 1,
 				title: 'Name',
-				details: 'Company Ltd',
+				details: 'Eystreem',
 			},
 			{
 				id: 2,
 				title: 'Services',
-				details: 'UI Design & Frontend Development',
+				details: 'UI Design & Development',
 			},
 			{
 				id: 3,
 				title: 'Website',
-				details: 'https://company.com',
-			},
-			{
-				id: 4,
-				title: 'Phone',
-				details: '555 8888 888',
-			},
+				details: 'https://www.youtube.com/@eystreem',
+			}
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -71,9 +66,8 @@ export const youtuberWebsiteData = {
 					'HTML',
 					'CSS',
 					'JavaScript',
-					'Vue.js',
-					'TailwindCSS',
-					'AdobeXD',
+					'React',
+					'Bootstrap'
 				],
 			},
 		],
@@ -82,22 +76,22 @@ export const youtuberWebsiteData = {
 			{
 				id: 1,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					"Project goal The Content-Creator Eystreem was a sensation across all major social media platforms, yet there was one missing piece to his digital presence – a personal website to truly showcase his personality and purpose. 🌟✨ But fear not, for that was about to change! Stay tuned for the unveiling of his virtual home, where his essence will shine brighter than ever before! 💻🚀 ",
 			},
 			{
 				id: 2,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					"The vision for the website was to create a digital haven where Eystreem could seamlessly integrate all his social networks while providing deeper insights into his persona, all while encapsulating his signature style and colors! 🎨✨ The blueprint for this virtual masterpiece took shape through meticulous design and prototyping in Figma.",
 			},
 			{
 				id: 3,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					"With the design in hand, it was time to breathe life into pixels! Armed with nothing but pure HTML, CSS, and Javascript, the website came to fruition. Hosted graciously on Netlify, this project is not only visually stunning but also meticulously responsive, ensuring a delightful experience across all devices. 🌟💻",
 			},
 			{
 				id: 4,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					'',
 			},
 		],
 		SocialSharingHeading: 'Share This',

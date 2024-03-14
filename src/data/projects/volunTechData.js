@@ -1,7 +1,7 @@
 // Import images
-import Image1 from '../../images/ui-project-1.jpg';
-import Image2 from '../../images/web-project-2.jpg';
-import Image3 from '../../images/mobile-project-2.jpg';
+import Image1 from '../../images/ngo-website/image-1.png';
+import Image2 from '../../images/ngo-website/image-2.png';
+import Image3 from '../../images/ngo-website/image-3.png';
 import Image4 from '../../images/mobile-project-1.jpg';
 import Image5 from '../../images/web-project-1.jpg';
 import Image6 from '../../images/ui-project-2.jpg';
@@ -17,8 +17,8 @@ import {
 export const volunTechData = {
 	ProjectHeader: {
 		title: 'VolunTech - A voluntary aid website for NGOs',
-		publishDate: 'Jul 26, 2021',
-		tags: 'UI / Frontend',
+		publishDate: 'Dez 20, 2023',
+		tags: 'UI / Frontend / Backend',
 	},
 	ProjectImages: [
 		{
@@ -43,23 +43,13 @@ export const volunTechData = {
 			{
 				id: 1,
 				title: 'Name',
-				details: 'Company Ltd',
+				details: 'VolunTech',
 			},
 			{
 				id: 2,
 				title: 'Services',
-				details: 'UI Design & Frontend Development',
-			},
-			{
-				id: 3,
-				title: 'Website',
-				details: 'https://company.com',
-			},
-			{
-				id: 4,
-				title: 'Phone',
-				details: '555 8888 888',
-			},
+				details: 'UI Design & Frontend/Backend Development',
+			}
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -71,9 +61,8 @@ export const volunTechData = {
 					'HTML',
 					'CSS',
 					'JavaScript',
-					'Vue.js',
-					'TailwindCSS',
-					'AdobeXD',
+					'NodeJS',
+					'ReactJS'
 				],
 			},
 		],
@@ -82,22 +71,22 @@ export const volunTechData = {
 			{
 				id: 1,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					'This project was developed by me and 2 other companions, where I was the technological responsible.',
 			},
 			{
 				id: 2,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					'The main goal is to facilitate a symbiotic relationship where NGOs harness cutting-edge tech solutions to amplify their impact, while budding volunteers immerse themselves in real-world projects, gaining invaluable experience along the way.',
 			},
 			{
 				id: 3,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					"As our project evolved, so did our vision. Today, we extend our reach beyond tech aficionados to welcome designers and video editors into our fold. Together, we're on a mission to empower NGOs worldwide, enriching lives and effecting positive change one project at a time.",
 			},
 			{
 				id: 4,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					"VolunTech 🌟 was crafted from the ground up, with its UI/UX and prototype meticulously designed on FIGMA. The visual aesthetic prioritizes comfort and security, ensuring a seamless experience for both NGO managers and volunteers as they navigate the platform.🖥️",
 			},
 		],
 		SocialSharingHeading: 'Share This',

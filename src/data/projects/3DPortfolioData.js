@@ -1,7 +1,7 @@
 // Import images
-import Image1 from '../../images/ui-project-1.jpg';
-import Image2 from '../../images/web-project-2.jpg';
-import Image3 from '../../images/mobile-project-2.jpg';
+import Image1 from '../../images/3d-portfolio/image-1.png';
+import Image2 from '../../images/3d-portfolio/image-2.png';
+import Image3 from '../../images/3d-portfolio/image-3.png';
 import Image4 from '../../images/mobile-project-1.jpg';
 import Image5 from '../../images/web-project-1.jpg';
 import Image6 from '../../images/ui-project-2.jpg';
@@ -43,7 +43,7 @@ export const PortfolioData = {
 			{
 				id: 1,
 				title: 'Name',
-				details: 'Company Ltd',
+				details: 'Herbert Richard',
 			},
 			{
 				id: 2,
@@ -54,12 +54,7 @@ export const PortfolioData = {
 				id: 3,
 				title: 'Website',
 				details: 'https://company.com',
-			},
-			{
-				id: 4,
-				title: 'Phone',
-				details: '555 8888 888',
-			},
+			}
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -71,9 +66,9 @@ export const PortfolioData = {
 					'HTML',
 					'CSS',
 					'JavaScript',
-					'Vue.js',
-					'TailwindCSS',
-					'AdobeXD',
+					'ReactJS',
+					'Styled Components',
+					'Figma',
 				],
 			},
 		],
@@ -82,22 +77,22 @@ export const PortfolioData = {
 			{
 				id: 1,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					"As a developer with a deep passion for marking Low-Poly 3D art. A portfolio transcends mere virtual showcasing, It's the stage where my skills, style, and creativity come alive, captivating potential clients, employers, and collaborators. 🎨✨",
 			},
 			{
 				id: 2,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					"With this inspiration in mind, I've decided to create a website that not only showcases my artworks but also captures the essence of my style and shares my journey in the artistic realm. 🌟",
 			},
 			{
 				id: 3,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					"The initial concept revolved around crafting a website that embodied ease of editing, beauty, modernity, and simplicity. With this vision in mind, I turned to Figma to create both the prototype and the UI/UX designs. Every element, from the layout to the fonts and colors, was meticulously chosen to exude a sense of modernity and style. ✨",
 			},
 			{
 				id: 4,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					"For the development phase, I opted to leverage the power of HTML, CSS, and Javascript exclusively, eschewing the need for a framework. This decision allowed for a more tailored approach, ensuring the final product aligned seamlessly with the original vision. 🚀",
 			},
 		],
 		SocialSharingHeading: 'Share This',
