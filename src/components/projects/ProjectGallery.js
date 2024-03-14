@@ -13,6 +13,7 @@ export const ModalComponent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 
 
   > img {
@@ -22,8 +23,17 @@ export const ModalComponent = styled.div`
   }
 
   > button {
-    background: white;
+    background: #F01E29;
+    width: 64px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 47px rgba(0, 0, 0, 0.55));
+    transition: transform 0.5s, filter 0.5s;
+  }
 
+  > button:hover{
+    filter: drop-shadow(0 0 47px rgba(0, 0, 0, 0.95));
+
+    transform: scale(1.15);
   }
 `
 
