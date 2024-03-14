@@ -11,27 +11,27 @@ const socialLinks = [
 	{
 		id: 1,
 		icon: <FiGlobe />,
-		url: 'https://www.stoman.me/',
+		url: '#',
 	},
 	{
 		id: 2,
 		icon: <FiGithub />,
-		url: 'https://github.com/realstoman',
+		url: 'https://github.com/Herbert-RD',
 	},
 	{
 		id: 3,
 		icon: <FiTwitter />,
-		url: 'https://twitter.com/realstoman',
+		url: 'https://twitter.com/Herbert_RCD',
 	},
 	{
 		id: 4,
 		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/realstoman',
+		url: 'https://www.linkedin.com/in/herbert-richard-25113226b/',
 	},
 	{
 		id: 5,
 		icon: <FiYoutube />,
-		url: 'https://www.youtube.com/c/realstoman',
+		url: 'https://www.youtube.com/channel/UCUw3U5yS_v2ent8TsI2qgWw',
 	},
 ];
 
