@@ -1,17 +1,25 @@
 import { useContext, useState } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import {Component, ModalComponent} from './ProjectGallery.js'
-import close from '../../images/close.svg'
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 
+
 	const [modalVisible, toggleModal] = useState(false);
 	let modalComponent
 
+	document.addEventListener("keydown", (event) => {
+		if(event.keyCode == 27){
+			console.log('oi')
+
+			toggleModal(false)
+		}
+	})
+
 	function buildModal(img){
 		return (
-			<ModalComponent id="galleryModal" onClick={() => toggleModal(!modalVisible)}>
+			<ModalComponent id="galleryModal"  onClick={() => toggleModal(!modalVisible)}>
 				{/* <button onClick={() => toggleModal(!modalVisible)}> <img src={close} alt="" /> </button> */}
 				<img src={img} alt="" />
 			</ModalComponent>)
