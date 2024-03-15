@@ -12,7 +12,7 @@ const ProjectGallery = () => {
 	function buildModal(img){
 		return (
 			<ModalComponent id="galleryModal" onClick={() => toggleModal(!modalVisible)}>
-				<button onClick={() => toggleModal(!modalVisible)}> <img src={close} alt="" /> </button>
+				{/* <button onClick={() => toggleModal(!modalVisible)}> <img src={close} alt="" /> </button> */}
 				<img src={img} alt="" />
 			</ModalComponent>)
 	}

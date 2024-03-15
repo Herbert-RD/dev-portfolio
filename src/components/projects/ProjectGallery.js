@@ -17,7 +17,7 @@ export const ModalComponent = styled.div`
 
 
   > img {
-    width: 40vw;
+    width: 60vw;
     border-radius: 12px;
     filter: drop-shadow(0 0 47px rgba(0, 0, 0, 0.25));
   }
