@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, createContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
@@ -13,8 +13,11 @@ const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
+export const lenguageContext = createContext('en')
 
 function App() {
+
+
 	return (
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
@@ -22,17 +25,19 @@ function App() {
 					<ScrollToTop />
 					<AppHeader />
 					<Suspense fallback={""}>
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="projects" element={<Projects />} />
-							<Route
-								path="projects/single-project"
-								element={<ProjectSingle />}
-							/>
+						<lenguageContext.Provider>
+							<Routes>
+								<Route path="/" element={<Home />} />
+								<Route path="projects" element={<Projects />} />
+								<Route
+									path="projects/single-project"
+									element={<ProjectSingle />}
+								/>
 
-							<Route path="about" element={<About />} />
-							<Route path="contact" element={<Contact />} />
-						</Routes>
+								<Route path="about" element={<About />} />
+								<Route path="contact" element={<Contact />} />
+							</Routes>
+						</lenguageContext.Provider>
 					</Suspense>
 					<AppFooter />
 				</Router>
