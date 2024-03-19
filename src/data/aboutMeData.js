@@ -12,7 +12,7 @@ export const aboutMeData = [
 	[
 		{
 			id: 1,
-			bio: "Brazil Porra",
+			bio: "Apesar de programar desde criança, eu iniciei minha jornada no desenvolvimento web no inicio de 2023, amo descobrir todo dia oque está por trás dos softwares que mais utilizo e como posso fazer os meus proprios.",
 		},
 		{
 			id: 2,
