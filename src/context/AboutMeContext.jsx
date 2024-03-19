@@ -9,13 +9,14 @@ import { lenguageContext } from '../App'
 const AboutMeContext = createContext();
 
 export const AboutMeProvider = ({ children }) => {
-	const lenguage = 'pt'
+
+	const selectedLenguage = useContext(lenguageContext);
 	
 	let aboutMeDataTransalated
-	if(lenguage == 'en'){
+	if(selectedLenguage.lenguage == 'en'){
 		aboutMeDataTransalated = aboutMeData[0]
 	}
-	if(lenguage == 'pt'){
+	if(selectedLenguage.lenguage == 'pt'){
 		aboutMeDataTransalated = aboutMeData[1]
 	}
 

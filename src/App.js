@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import { lazy, Suspense, createContext } from 'react';
+import { lazy, Suspense, createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
@@ -15,7 +15,18 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 export const lenguageContext = createContext('en')
 
+export function setLenguageWrapper(initialLenguage){
+	console.log('rodou')
+	let newLenguage = initialLenguage == 'en' ? 'pt' : 'en';
+	console.log(newLenguage)
+	localStorage.setItem('lenguage', newLenguage)
+	window.location.reload()
+}
+
 function App() {
+
+	const initialLenguage = localStorage.getItem('lenguage') 
+	const [lenguage, setLenguage] = useState(initialLenguage)
 
 
 	return (
@@ -25,7 +36,7 @@ function App() {
 					<ScrollToTop />
 					<AppHeader />
 					<Suspense fallback={""}>
-						<lenguageContext.Provider>
+						<lenguageContext.Provider value={{lenguage: lenguage, setLenguage: setLenguage}}>
 							<Routes>
 								<Route path="/" element={<Home />} />
 								<Route path="projects" element={<Projects />} />
