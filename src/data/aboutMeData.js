@@ -16,7 +16,7 @@ export const aboutMeData = [
 		},
 		{
 			id: 2,
-			bio: "Seeking a Full Stack Developer who can bring your web projects to life? don't hesitate to reach out. Let's collaborate to create exceptional web solutions that exceed your expectations. Contact me today to discuss your project requirements and start a journey toward success!",
+			bio: "Procurando um Desenvolvedor Full Stack que possa dar vida aos seus projetos web? Não hesite em entrar em contato. Vamos colaborar para criar soluções web excepcionais que superem suas expectativas. Entre em contato hoje mesmo para discutir os requisitos do seu projeto e iniciar uma jornada rumo ao sucesso!",
 		}
 	]
 ];
