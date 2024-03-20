@@ -16,7 +16,6 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 export const lenguageContext = createContext('en')
 
 export function setLenguageWrapper(initialLenguage){
-	console.log('rodou')
 	let newLenguage = initialLenguage == 'en' ? 'pt' : 'en';
 	console.log(newLenguage)
 	localStorage.setItem('lenguage', newLenguage)
@@ -24,6 +23,11 @@ export function setLenguageWrapper(initialLenguage){
 }
 
 function App() {
+
+	//sets the default lenguage, if it doesn't exists
+	if(!localStorage.getItem('lenguage')){
+		localStorage.setItem('lenguage', 'en')
+	}
 
 	const initialLenguage = localStorage.getItem('lenguage') 
 	const [lenguage, setLenguage] = useState(initialLenguage)
@@ -38,6 +42,7 @@ function App() {
 					<Suspense fallback={""}>
 						<lenguageContext.Provider value={{lenguage: lenguage, setLenguage: setLenguage}}>
 							<Routes>
+								<Route path="/pt" element={<Home lenguage="pt"/>} />
 								<Route path="/" element={<Home />} />
 								<Route path="projects" element={<Projects />} />
 								<Route

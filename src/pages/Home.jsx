@@ -4,11 +4,18 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 
-const Home = () => {
+const Home = (props) => {
+
+	if(props.lenguage && props.lenguage != localStorage.getItem('lenguage')){
+		localStorage.setItem('lenguage', props.lenguage);
+		window.location.reload()
+	}
+
+	
+
 	return (
 		<div className="container mx-auto">
 			<AppBanner></AppBanner>
-
 			<ProjectsProvider>
 				<ProjectsGrid></ProjectsGrid>
 			</ProjectsProvider>
