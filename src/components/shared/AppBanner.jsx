@@ -4,15 +4,14 @@ import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
 
-import { lenguageContext } from '../../App.js'
-import { useContext } from 'react';
+
+import { checkLenguage } from '../../App.js';
 
 
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
-	const lenguageContextWrapper = useContext(lenguageContext)
-	let selectedLenguage = lenguageContextWrapper.lenguage
+
 
 
 	return (
@@ -33,7 +32,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light"
 				>
-					{selectedLenguage == 'en' ? "Hi, I'm Herbert!" : "Olá, Sou Herbert!"}
+					{checkLenguage("Hi, I'm Herbert!", "Olá, Sou Herbert!")}
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -45,7 +44,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					{selectedLenguage == 'en' ? "A Full-Stack Developer." : "Desenvolvedor Full-Stack."}
+					{checkLenguage("A Full-Stack Developer.", "Desenvolvedor Full-Stack.")}
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -64,7 +63,7 @@ const AppBanner = () => {
 					>
 						<PiProjectorScreenFill className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></PiProjectorScreenFill>
 						<span className="text-sm sm:text-lg font-general-medium duration-100">
-							{selectedLenguage == 'en' ? "Portfolio" : "Portifólio"}
+						{checkLenguage("Portfolio", "Portifólio")}
 						</span>
 					</a>
 				</motion.div>

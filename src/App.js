@@ -22,6 +22,17 @@ export function setLenguageWrapper(initialLenguage){
 	window.location.reload()
 }
 
+export function checkLenguage(en, pt){
+	let selectedLenguage = localStorage.getItem('lenguage');
+
+	if(selectedLenguage == 'en'){
+		return en
+	}
+	if(selectedLenguage == 'pt'){
+		return pt
+	}
+}
+
 function App() {
 
 	//sets the default lenguage, if it doesn't exists
