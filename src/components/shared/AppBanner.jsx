@@ -4,15 +4,16 @@ import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
 
+import { lenguageContext } from '../../App';
+import { useContext } from 'react';
 
-import { checkLenguage } from '../../App.js';
-
-
+import { checkLenguage } from '../../App';
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
 
-
+	const lenguageWrapper = useContext(lenguageContext);
+	
 
 	return (
 		<motion.section
@@ -44,7 +45,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					{checkLenguage("A Full-Stack Developer.", "Desenvolvedor Full-Stack.")}
+					{lenguageWrapper.lenguage == 'en' ? "A Full-Stack Developer." : "Desenvolvedor Full-Stack"}
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}

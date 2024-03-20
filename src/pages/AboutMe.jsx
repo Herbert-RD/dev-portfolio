@@ -11,6 +11,7 @@ import { setLenguageWrapper } from '../App';
 const About = () => {
 
 	const lenguageWrapper = useContext(lenguageContext);
+	console.log(lenguageWrapper.lenguage + 'oi')
 
 	return (
 		<AboutMeProvider>
@@ -21,8 +22,15 @@ const About = () => {
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
 				className="container mx-auto"
-			>
-			<button onClick={() => lenguageWrapper.setLenguage(setLenguageWrapper(lenguageWrapper.lenguage))}>Click To Portuguese</button>
+			> 
+
+			<h1>{lenguageWrapper.lenguage == 'pt' ? 'Portugues' : 'English'}</h1>
+			
+			<button onClick={() => lenguageWrapper.setLenguage('pt')}>Click To Portuguese 2</button>
+			<button onClick={() => lenguageWrapper.setLenguage('en')}>Click To English</button>
+
+			{/* <button onClick={() => setLenguageWrapper(lenguageWrapper.lenguage)}>Click To Portuguese</button> */}
+
 				<AboutMeBio />
 			</motion.div>
 
