@@ -11,7 +11,6 @@ import { setLenguageWrapper } from '../App';
 const About = () => {
 
 	const lenguageWrapper = useContext(lenguageContext);
-	console.log(lenguageWrapper.lenguage + 'oi')
 
 	return (
 		<AboutMeProvider>
@@ -26,8 +25,8 @@ const About = () => {
 
 			<h1>{lenguageWrapper.lenguage == 'pt' ? 'Portugues' : 'English'}</h1>
 			
-			<button onClick={() => lenguageWrapper.setLenguage('pt')}>Click To Portuguese 2</button>
-			<button onClick={() => lenguageWrapper.setLenguage('en')}>Click To English</button>
+			<button onClick={() => {lenguageWrapper.setLenguage('pt'); localStorage.setItem('lenguage', 'pt')}}>Click To Portuguese 2</button>
+			<button onClick={() => {lenguageWrapper.setLenguage('en') ; localStorage.setItem('lenguage', 'en')}}>Click To English</button>
 
 			{/* <button onClick={() => setLenguageWrapper(lenguageWrapper.lenguage)}>Click To Portuguese</button> */}
 
