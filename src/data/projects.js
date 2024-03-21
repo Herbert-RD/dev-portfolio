@@ -4,7 +4,8 @@ import volunTech from '../images/voluntech.png';
 import portfolioWebsite from '../images/portfolio-website.png';
 
 export const projectsData = [
-	{
+
+	[{
 		id: 1,
 		title: 'Youtuber Personal Website',
 		category: 'Web Application',
@@ -21,5 +22,23 @@ export const projectsData = [
 		title: '3D Art Portfolio Website',
 		category: 'UI/UX Design',
 		img: portfolioWebsite
-	}
+	}],
+	[{
+		id: 1,
+		title: 'Website Pessoal Para Youtuber',
+		category: 'Website',
+		img: youtuberWebsite
+	},
+	{
+		id: 2,
+		title: 'VolunTech - Um site de ajuda voluntária para ONGs',
+		category: 'Web Application',
+		img: volunTech
+	},
+	{
+		id: 3,
+		title: '3D Art Portfolio Website',
+		category: 'UI/UX Design',
+		img: portfolioWebsite
+	}]
 ];
