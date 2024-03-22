@@ -4,6 +4,8 @@ import ProjectSingle from './ProjectSingle.jsx';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
 
+import { lenguageContext } from '../../App.js'
+
 const ProjectsGrid = () => {
 	const {
 		projects,
@@ -15,11 +17,13 @@ const ProjectsGrid = () => {
 		selectProjectsByCategory,
 	} = useContext(ProjectsContext);
 
+	const lenguageWrapper = useContext(lenguageContext);
+
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects portfolio
+					{lenguageWrapper.lenguage == 'en' ?  'Projects portfolio' : 'Portifólio de Projetos'}
 				</p>
 			</div>
 
@@ -33,7 +37,8 @@ const ProjectsGrid = () => {
                         mb-3
                         "
 				>
-					Search projects by title or filter by category
+					{lenguageWrapper.lenguage == 'en' ?  'Search projects by title or filter by category' : 'Procure projetos por título ou filtre por categoria'}
+					
 				</h3>
 				<div
 					className="
@@ -88,7 +93,7 @@ const ProjectsGrid = () => {
 							name="name"
 							type="search"
 							required=""
-							placeholder="Search Projects"
+							placeholder={lenguageWrapper.lenguage == 'en' ? "Search Projects" : "Procurar Projetos"}
 							aria-label="Name"
 						/>
 					</div>

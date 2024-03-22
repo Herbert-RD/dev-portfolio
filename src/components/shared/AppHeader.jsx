@@ -8,11 +8,15 @@ import logoDark from '../../images/logo-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
+import { lenguageContext } from '../../App'
+
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
+
+	const lenguageWrapper = useContext(lenguageContext);
 
 
 	function toggleMenu() {
@@ -114,21 +118,23 @@ const AppHeader = () => {
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
-						Projects
+						{lenguageWrapper.lenguage == 'en' ? 'Projects' : 'Projetos'}
 					</Link>
 					<Link
 						to="/about"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
 						aria-label="About Me"
 					>
-						About Me
+						{lenguageWrapper.lenguage == 'en' ? 'About Me' : 'Sobre mim'}
+
 					</Link>
 					<Link
 						to="/contact"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
 						aria-label="Contact"
 					>
-						Contact
+						{lenguageWrapper.lenguage == 'en' ? 'Contact' : 'Contato'}
+
 					</Link>
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						
@@ -142,21 +148,24 @@ const AppHeader = () => {
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
-						Projects
+						{lenguageWrapper.lenguage == 'en' ? 'Projects' : 'Projetos'}
+
 					</Link>
 					<Link
 						to="/about"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="About Me"
 					>
-						About Me
+						{lenguageWrapper.lenguage == 'en' ? 'About Me' : 'Sobre mim'}
+
 					</Link>
 					<Link
 						to="/contact"
 						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Contact"
 					>
-						Contact
+						{lenguageWrapper.lenguage == 'en' ? 'Contact' : 'Contato'}
+
 					</Link>
 				</div>
 

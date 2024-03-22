@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { lenguageContext } from '../../App';
 const selectOptions = [
 	'Web Application',
 	'Mobile Application',
@@ -5,7 +7,9 @@ const selectOptions = [
 	'Branding',
 ];
 
+
 const ProjectsFilter = ({ setSelectProject }) => {
+	const lenguageWrapper = useContext(lenguageContext);	
 	return (
 		<select
 			onChange={(e) => {
@@ -29,7 +33,7 @@ const ProjectsFilter = ({ setSelectProject }) => {
             "
 		>
 			<option value={setSelectProject} className="text-sm sm:text-md shrink">
-				All Projects
+				{lenguageWrapper.lenguage == 'en' ? 'All projects' : 'Todos os projetos'}
 			</option>
 
 			{selectOptions.map((option) => (
