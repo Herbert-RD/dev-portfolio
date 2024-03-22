@@ -7,6 +7,7 @@ import logoLight from '../../images/logo-light.svg';
 import logoDark from '../../images/logo-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
+import LenguageDropdown from '../reusable/LenguageDropdown.jsx'
 
 import { lenguageContext } from '../../App'
 
@@ -69,6 +70,8 @@ const AppHeader = () => {
 						</Link>
 					</div>
 
+					<LenguageDropdown />
+
 					{/* Theme switcher small screen */}
 					<div
 						onClick={() => setTheme(activeTheme)}
@@ -81,6 +84,8 @@ const AppHeader = () => {
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
 					</div>
+
+
 
 					{/* Small screen hamburger menu */}
 					<div className="sm:hidden">
