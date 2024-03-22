@@ -17,7 +17,7 @@ const socialLinks = [
 	},
 	{
 		id: 2,
-		icon: <FiGithub />,
+		icon: <FiGithub />,	
 		url: 'https://github.com/Herbert-RD',
 	},
 	{

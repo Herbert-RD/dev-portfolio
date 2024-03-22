@@ -9,16 +9,27 @@ import { youtuberWebsiteData as youtuberWebsiteDataJson } from '../data/projects
 let singleProjectDataJson = baseProjectDataJson;
 
 
+
+
 let projectListTitle =  [PortfolioDataDataJson, volunTechDataJson, youtuberWebsiteDataJson]
+
+// projectListTitle.forEach(element => {
+
+// 	console.log(element[0].ProjectHeader.title)
+// 	console.log('-----')
+// })
 
 export function selectProject(selectedProject){
 	return () => {
 		projectListTitle.forEach(element => {
-
-			if(element.ProjectHeader.title == selectedProject){
-				console.log(element)
-				singleProjectDataJson = element
+			
+			if(element[0].ProjectHeader.title == selectedProject){
+				singleProjectDataJson = element[0] // English Version
 			}
+			if(element[1].ProjectHeader.title == selectedProject){
+				singleProjectDataJson = element[1] // Portuguese Version
+			}
+
 		})
 	}
 }
