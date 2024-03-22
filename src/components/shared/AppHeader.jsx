@@ -8,7 +8,6 @@ import logoDark from '../../images/logo-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
-import { checkLenguage } from '../../App';
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);

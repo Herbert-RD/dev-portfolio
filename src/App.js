@@ -48,25 +48,25 @@ function App() {
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
-					<ScrollToTop />
-					<AppHeader />
-					<Suspense fallback={""}>
-						<lenguageContext.Provider value={{lenguage: lenguage, setLenguage: setLenguage}}>
-							<Routes>
-								<Route path="/pt" element={<Home lenguage="pt"/>} />
-								<Route path="/" element={<Home />} />
-								<Route path="projects" element={<Projects />} />
-								<Route
-									path="projects/single-project"
-									element={<ProjectSingle />}
-								/>
+					<lenguageContext.Provider value={{lenguage: lenguage, setLenguage: setLenguage}}>
+						<ScrollToTop />
+						<AppHeader />
+						<Suspense fallback={""}>
+								<Routes>
+									<Route path="/pt" element={<Home lenguage="pt"/>} />
+									<Route path="/" element={<Home />} />
+									<Route path="projects" element={<Projects />} />
+									<Route
+										path="projects/single-project"
+										element={<ProjectSingle />}
+									/>
 
-								<Route path="about" element={<About />} />
-								<Route path="contact" element={<Contact />} />
-							</Routes>
-						</lenguageContext.Provider>
-					</Suspense>
-					<AppFooter />
+									<Route path="about" element={<About />} />
+									<Route path="contact" element={<Contact />} />
+								</Routes>
+						</Suspense>
+						<AppFooter />
+					</lenguageContext.Provider>
 				</Router>
 				<UseScrollToTop />
 			</div>
