@@ -15,20 +15,20 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 export const lenguageContext = createContext('en')
 
-export function setLenguageWrapper(initialLenguage){
+export function setLenguageWrapper(initialLenguage) {
 	let newLenguage = initialLenguage == 'en' ? 'pt' : 'en';
 	console.log(newLenguage)
 	localStorage.setItem('lenguage', newLenguage)
 	window.location.reload()
 }
 
-export function checkLenguage(en, pt){
+export function checkLenguage(en, pt) {
 	let selectedLenguage = localStorage.getItem('lenguage');
 
-	if(selectedLenguage == 'en'){
+	if (selectedLenguage == 'en') {
 		return en
 	}
-	if(selectedLenguage == 'pt'){
+	if (selectedLenguage == 'pt') {
 		return pt
 	}
 }
@@ -36,11 +36,11 @@ export function checkLenguage(en, pt){
 function App() {
 
 	//sets the default lenguage, if it doesn't exists
-	if(!localStorage.getItem('lenguage')){
+	if (!localStorage.getItem('lenguage')) {
 		localStorage.setItem('lenguage', 'en')
 	}
 
-	const initialLenguage = localStorage.getItem('lenguage') 
+	const initialLenguage = localStorage.getItem('lenguage')
 	const [lenguage, setLenguage] = useState(initialLenguage)
 
 
@@ -48,22 +48,23 @@ function App() {
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
-					<lenguageContext.Provider value={{lenguage: lenguage, setLenguage: setLenguage}}>
+					<lenguageContext.Provider value={{ lenguage: lenguage, setLenguage: setLenguage }}>
 						<ScrollToTop />
 						<AppHeader />
 						<Suspense fallback={""}>
-								<Routes>
-									<Route path="/pt" element={<Home lenguage="pt"/>} />
-									<Route path="/" element={<Home />} />
-									<Route path="projects" element={<Projects />} />
-									<Route
-										path="projects/single-project"
-										element={<ProjectSingle />}
-									/>
+							<Routes>
+								<Route path="/pt" element={<Home lenguage="pt" />} />
+								<Route path="/en" element={<Home lenguage="en" />} />
+								<Route path="/" element={<Home />} />
+								<Route path="projects" element={<Projects />} />
+								<Route
+									path="projects/single-project"
+									element={<ProjectSingle />}
+								/>
 
-									<Route path="about" element={<About />} />
-									<Route path="contact" element={<Contact />} />
-								</Routes>
+								<Route path="about" element={<About />} />
+								<Route path="contact" element={<Contact />} />
+							</Routes>
 						</Suspense>
 						<AppFooter />
 					</lenguageContext.Provider>
