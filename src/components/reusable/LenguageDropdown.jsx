@@ -13,10 +13,16 @@ export default function LenguageDropdown() {
       </button>
 
       <div class="options-wrapper">
-        <button onClick={() => lenguageWrapper.setLenguage("pt")}>
+        <button
+          class={lenguageWrapper.lenguage == "pt" ? "selectedLang" : ""}
+          onClick={() => lenguageWrapper.setLenguage("pt")}
+        >
           Português
         </button>
-        <button onClick={() => lenguageWrapper.setLenguage("en")}>
+        <button
+          class={lenguageWrapper.lenguage == "en" ? "selectedLang" : ""}
+          onClick={() => lenguageWrapper.setLenguage("en")}
+        >
           English
         </button>
       </div>

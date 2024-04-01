@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 export const Component = styled.div`
   padding: 8px 16px;
-  border: 2px solid grey;
+  background-color: #f7f8fc;
   border-radius: 8px;
+  height: 44px;
 
   display: flex;
   flex-direction: column;
@@ -14,10 +15,19 @@ export const Component = styled.div`
 
   position: relative;
 
+  transition: background-color 0.2s, visibility 0.2s;
+  
+
+
+
+  &:hover{
+    background-color: #d3d5de;
+  }
 
   &:hover .options-wrapper{
     cursor: pointer;
-    display: flex;
+    visibility: visible;
+    opacity: 1;
   }
 
 
@@ -27,26 +37,36 @@ export const Component = styled.div`
     justify-content: center;
     align-items: center;
     gap: 8px;
-  
+    
   }
+  
+  .selectedLang {
+   background-color: #6366f1;
+   color: white;
 
+  }
   .options-wrapper {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
     flex-direction: column;
     
     top: 100%;
     position: absolute;
     width: 100%;
 
+    transition: visibility 0.2s, opacity 0.2s linear;
  }
 
  .options-wrapper button{
   width: 100%;
- }
+  padding: 8px 0;
+
+}
 
  .options-wrapper button:hover {
-  background-color: grey;
- }
 
- 
+}
+
+
 `
