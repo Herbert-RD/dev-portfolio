@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const Component = styled.div`
+export const Component = styled.button`
   padding: 8px 16px;
   border: 2px solid grey;
   border-radius: 8px;
@@ -15,6 +15,10 @@ export const Component = styled.div`
 
   &:hover{
     cursor: pointer;
-    
+  }
+
+  >.dropdown-wrapper {
+    display: flex;
+    flex-direction: colunm;
   }
 `
