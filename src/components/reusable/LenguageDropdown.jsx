@@ -6,18 +6,19 @@ import { lenguageContext } from "../../App.js";
 export default function LenguageDropdown() {
   const lenguageWrapper = useContext(lenguageContext);
   return (
-    <Component
-      onClick={() =>
-        lenguageWrapper.setLenguage(
-          lenguageWrapper.lenguage == "en" ? "pt" : "en"
-        )
-      }
-    >
-      <TiWorld />
-      Teste
-      <div class="dropdown-wrapper">
-        <button>Dropdown 1</button>
-        <button>Dropdown 2</button>
+    <Component>
+      <button id="open-drowndown">
+        <TiWorld />
+        Lenguage
+      </button>
+
+      <div class="options-wrapper">
+        <button onClick={() => lenguageWrapper.setLenguage("pt")}>
+          Português
+        </button>
+        <button onClick={() => lenguageWrapper.setLenguage("en")}>
+          English
+        </button>
       </div>
     </Component>
   );
